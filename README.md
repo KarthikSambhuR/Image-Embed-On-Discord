@@ -1,24 +1,28 @@
-# Image-Embed-On-Discord
-This cloudflare worker script lets you share your images on discord in a cool way
+# Image Embed on Discord
 
-### How to use 
+This Cloudflare Worker script lets you share your images on Discord in a cool way.
 
-Create a cloudflare worker and go to quick edit and paste the code from main.js file inside the code window
+## How to Use
 
-Replace Your_title_here with a title of your choice
+1. **Create the Cloudflare Worker:**
+   - Create a new Cloudflare Worker.
+   - Open the **Quick Edit** section and paste the code from your `main.js` file into the code window.
 
-Replace Description_for_your_image with a description of your choice
+2. **Configure the Script:**
+   - Replace `Your_title_here` with a title of your choice.
+   - Replace `Description_for_your_image` with a description of your choice.
+   - Replace `cloudflare_worker_link` with the URL of your Cloudflare Worker.
+   - Replace `#00FF8E` with the hex color code of your choice.
 
-Replace cloudflare_worker_link with the link of your cloudflare worker 
+   *Example:*  
+   If your worker link is `https://test.example.workers.dev`, replace `cloudflare_worker_link` with that URL.  
+   If you have a custom domain, use your custom domain instead.
 
-Replace #00FF8E with the hex color code of your choice
+3. **Using the Worker:**
+   - Visit your Cloudflare Worker URL (e.g., `https://test.example.workers.dev`).
+   - Append the query parameter `?url=imagelink` to the URL.
+   
+   *Example:*  
+   `https://test.example.workers.dev?url=https://i.imgur.com/eucAMTA.png`
 
-eg: if your worker link is https://test.example.workers.dev replace cloudflare_worker_link with https://test.example.workers.dev if you have a custom domain replace it with your custom domain
-
-Done!
-
-### How to use
-
-Go to your cloudflare worker link we are going to use https://test.example.workers.dev for now and add the parameters ?url=imagelink
-
-Now going to https://test.example.workers.dev?url=https://i.imgur.com/eucAMTA.png will show the image and sending the link will show a cool embed with the image
+   This will display the image and, when the link is sent on Discord, it will show a cool embed with the image.
